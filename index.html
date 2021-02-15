@@ -170,15 +170,21 @@ body {
 <p style="font-size: 30px">Przeczytaj<a href = "https://www.ce.uw.edu.pl/wp-content/uploads/2018/10/4.-kapitalizm_marks_engels_manifest-komunistyczny.pdf"> <mark>Manifest komunistyczny</a><mark>
 <p><center> <img src="https://raw.githubusercontent.com/krzygrom/dudownia.github.io/main/jd3.png">
 <p><center><input type="button" value="Poznaj prawdę" onclick="window.alert('Duda tak naprawde to dobry człowiek')">
-<p>Zostaw po sobie ślad</p>
-<form action="/action_page.php">
-  <label for="nick">Twój nick:</label><br>
-  <input type="text" id="nick" name="nick" value=""><br>
-  <center><input type="button" value="Prześlij" onclick="window.alert('Wysłano, dziękujemy')">
+	
+<form id="form" onsubmit="return false;">
+  <p><label for="nick">Zostaw wiadomość dla dudy:</label><br>
+  <p><input type="text" id="userInput" onsubmit="window.alert('Wysłano, dziękujemy')"/>
+    <p><input type="submit" value="Prześlij" onclick="wiadomość()">
+	    
 	  <audio autoplay="">
 		<source src="muzyka.mp3" type="audio/mpeg">
 		</source>
 	</audio>
-
+<script>
+function wiadomość() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+}
+</script>
 </body>
 </html>
