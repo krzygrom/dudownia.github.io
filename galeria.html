@@ -96,14 +96,36 @@
 <head>
 <center><h1><p>Galeria Dudy<p><h1>
 <body style="background-color:#808080;">
-<br/>	
-<center><p><img src="https://github.com/krzygrom/dudownia.github.io/blob/main/jd1.png?raw=true"></p>
-<center><p>^ Zakonny duda ^</p>
-<center><p><a href="https://imgur.com/Day7EkT"><img src="https://i.imgur.com/Day7EkT.png" title="source: imgur.com" /></a></p>
-<center><p>^ Duda KSW ^</p>
-<center><a href="https://imgur.com/yECcJi0"><img src="https://i.imgur.com/yECcJi0.png" title="source: imgur.com" /></a>	
-<center><p>^ Duda po dropsach ^</p>
-<center><a href="https://imgur.com/ePpGGhL"><img src="https://i.imgur.com/ePpGGhL.png" title="source: imgur.com" /></a>
-<center><p>Samotny duda</p>
+<br/>
+<div id="quote"></div>
+
+<input class="Randombutton" style="float: center;" type="button" 
+value="Wylosuj zdjęcie" onclick="randomImg()">
+	
+<script>function randomImg() {
+      var quotes = [
+        {
+          text: "Zakonny duda",
+          img:  "https://github.com/krzygrom/dudownia.github.io/blob/main/jd1.png?raw=true"
+        },
+        {
+          text: "Duda KSW",
+          img:  "https://i.imgur.com/Day7EkT.png",
+        },
+		{
+          text: "Duda po dropsach",
+          img:  "https://i.imgur.com/yECcJi0.png",
+        },
+		{
+          text: "Samotny duda",
+          img:  "https://i.imgur.com/ePpGGhL.png",
+        },
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<p>' + quote.text + '</p>' +
+        '<img src="' + quote.img + '">';
+    }
+</script>
 </body>
 </html>
